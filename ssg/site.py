@@ -12,6 +12,7 @@ class Site:
         '''See if a directory exists before we create it.'''
         directory = self.dest / path.relative_to(self.source)
         Path.mkdir(directory, parents=True, exist_ok=True)
+        
      
     def build(self):
         '''Now we can create then directory.  Path.rglob(pattern) to find the match we want'''
