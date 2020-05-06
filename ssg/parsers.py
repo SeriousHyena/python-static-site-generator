@@ -21,7 +21,7 @@ class Parser:
     def write(self, path, dest, content, ext='.html'):
         full_path = dest / path.with_suffix(ext).name # .name = A string representing the final path component, excluding the drive and root, if any
         with open(full_path, 'w') as file:
-            write.content to file
+            file.write(content)
 
 
 
