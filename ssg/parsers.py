@@ -1,6 +1,9 @@
 from typing import List
 from pathlib import Path
 
+'''This module uses Typer. More information about Typer here:
+https://typer.tiangolo.com/#example'''
+
 class Parser:
 
     extensions: List[str] = []
