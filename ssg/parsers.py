@@ -18,3 +18,8 @@ class Parser:
         with open(path, 'r', encoding='utf-8') as file: # Use r to open for reading
             return file.read() 
 
+    def write(self, path, dest, content, ext='.html'):
+        full_path = dest / path.with_suffix(ext).name
+        
+
+
