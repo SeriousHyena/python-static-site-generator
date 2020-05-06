@@ -24,6 +24,6 @@ class Parser:
         with open(full_path, 'w') as file:
             file.write(content)
 
-    def copy(self, path, source, dest):
-        shutil.copy2(path, dest / relative_to(source)) # relative_to is a pathlib method
+     def copy(self, path, source, dest):
+        shutil.copy2(path, dest / path.relative_to(source))
 
