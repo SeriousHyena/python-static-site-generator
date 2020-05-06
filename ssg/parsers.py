@@ -1,5 +1,6 @@
 from typing import List
 from pathlib import Path #https://docs.python.org/3/library/pathlib.html
+import shutil # https://docs.python.org/3/library/shutil.html
 
 '''This module uses Typer. More information about Typer here:
 https://typer.tiangolo.com/#example'''
@@ -23,5 +24,6 @@ class Parser:
         with open(full_path, 'w') as file:
             file.write(content)
 
-
+    def copy(self, path, source, dest):
+        copy2(path, dest / relative_to(source)) # relative_to is a pathlib method
 
