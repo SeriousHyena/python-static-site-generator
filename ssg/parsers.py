@@ -16,5 +16,5 @@ class Parser:
 
     def read(self, path):
         with open(path) as file: 
-            return read(path) from file 
+            return path from file 
 
