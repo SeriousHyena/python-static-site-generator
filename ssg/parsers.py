@@ -1,5 +1,5 @@
 from typing import List
-from pathlib import Path
+from pathlib import Path #https://docs.python.org/3/library/pathlib.html
 
 '''This module uses Typer. More information about Typer here:
 https://typer.tiangolo.com/#example'''
@@ -19,7 +19,9 @@ class Parser:
             return file.read() 
 
     def write(self, path, dest, content, ext='.html'):
-        full_path = dest / path.with_suffix(ext).name
-        
+        full_path = dest / path.with_suffix(ext).name # .name = A string representing the final path component, excluding the drive and root, if any
+        with open(full_path, 'r') as file:
+            write(content) to file
+
 
 
