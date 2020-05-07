@@ -20,7 +20,8 @@ class Site:
 
      
     def build(self):
-        '''Now we can create then directory.  Path.rglob(pattern) to find the match we want'''
+        '''Now we can create then directory.  Path.rglob(pattern) to find the match we want.
+        https://docs.python.org/3.1/library/glob.html'''
         self.dest.mkdir(parents=True, exist_ok=True)
         for path in self.source.rglob("*"):
             if path.is_dir():
@@ -33,3 +34,12 @@ class Site:
 
     def run_parser(self, path):
         parser = self.load_parser(path.suffix) #From pathlib- .suffix = The file extension of the final component, if any.
+        if self.parser is not None:
+            parser.parser(path, self.source, self.dest)
+
+        if self.parser is None:
+            print('Not Implemented')
+
+        else:
+            print('Not Implemented')
+    
