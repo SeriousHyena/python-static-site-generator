@@ -6,7 +6,10 @@ import typer # I will need to pip install this module (https://pypi.org/project/
 from ssg.site import Site
 
 def main(source='content', dest='dist'):
-    config = {'source': source, 'dest': dest, 'parsers': ssg.parsers.ResourceParser()}
+    config = {'source': source, 
+        'dest': dest, 
+        'parsers': [ssg.parsers.ResourceParser()]} # This key-value pair produces an array hence the square brackets
+
     Site(**config).build()
 
 typer.run(main)
