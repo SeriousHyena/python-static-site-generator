@@ -12,5 +12,7 @@ class Content(Mapping):
         https://www.python.org/dev/peps/pep-0008/#function-and-method-arguments'''
 
         _, fm, content = cls.__regex.split(string, 2) # here we use cls per pep 8
-        load(fm, Loader=FullLoader)
+        metadata = load(fm, Loader=FullLoader)
         return cls(metadata, content)
+
+         
