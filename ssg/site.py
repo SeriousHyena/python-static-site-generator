@@ -28,5 +28,5 @@ class Site:
 
     def load_parser(self, extension):
         for parser in self.parsers:
-            if extension is valid_extension():
+            if self.extension is valid_extension():
                 return parser
