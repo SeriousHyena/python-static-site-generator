@@ -9,7 +9,7 @@ class Site:
 
         '''Instance variable tutorial here:
         https://www.digitalocean.com/community/tutorials/understanding-class-and-instance-variables-in-python-3'''
-        parsers = parsers or [] # this is my new instance variable for 
+        self.parsers = parsers or [] # this is my new instance variable for 
 
 
  
