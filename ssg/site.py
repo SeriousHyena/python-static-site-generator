@@ -30,3 +30,6 @@ class Site:
         for parser in self.parsers:
             if parser.valid_extension(extension): # parser is an extension of Parser class so dot.chain the method
                 return parser
+
+    def run_parser(self, path):
+        parser = load_parser(path.suffix) #From pathlib- .suffix = The file extension of the final component, if any.
