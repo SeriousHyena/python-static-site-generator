@@ -2,10 +2,16 @@ from pathlib import Path
 
 class Site:
 
-    def __init__(self, source, dest):
+    def __init__(self, source, dest, parsers=None): # this is the class constructor
         '''Find the root directory.'''
         self.source = Path(source)
         self.dest = Path(dest)
+
+        '''Instance variable tutorial here:
+        https://www.digitalocean.com/community/tutorials/understanding-class-and-instance-variables-in-python-3'''
+        parsers = parsers or [] # this is my new instance variable for 
+
+
  
     def create_dir(self, path):
         '''Create the directory but see if it exists before we create it.'''
