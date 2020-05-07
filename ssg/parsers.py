@@ -31,7 +31,8 @@ class ResourceParser(Parser):
     '''Good tutorial here for implementing class methods: 
     https://www.geeksforgeeks.org/classmethod-in-python/'''
     def __init__(self, extensions):
-        self.extensions = ['.jpg', '.png', '.gif', '.css', '.html']
+        extensions = ['.jpg', '.png', '.gif', '.css', '.html']
+        self._extensions = extensions
 
     def parse(self, path: Path, source: Path, dest: Path):
         self.copy(path, source, dest)
