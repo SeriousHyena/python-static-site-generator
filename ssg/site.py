@@ -35,7 +35,7 @@ class Site:
     def run_parser(self, path):
         parser = self.load_parser(path.suffix) #From pathlib- .suffix = The file extension of the final component, if any.
         if parser is not None:
-            parser.parser(path, self.source, self.dest)
+            parser.parse(path, self.source, self.dest)
 
         if parser is None:
             print('Not Implemented')
