@@ -30,7 +30,7 @@ class Site:
             # test if path is a file
             elif:
                 path.is_file()
-                Site.run_parser(path)
+                self.run_parser(path)
 
 
     def load_parser(self, extension):
